@@ -1,0 +1,1 @@
+System.register(["./entry-legacy.47aa53f6.js"],(function(e,t){"use strict";var c,r,s,i;return{setters:[e=>{c=e.ca,r=e.cD,s=e.ci,i=e.cE}],execute:function(){e("setup",c("recharge-item",(e=>({exposed:{clickItem:function(){var t={scene:r.正常,step:s.HOME,item:e.props.item};i(t)}}}))))}}}));
