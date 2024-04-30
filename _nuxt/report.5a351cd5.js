@@ -1,0 +1,1 @@
+import{K as c,U as s}from"./entry.7d2e4f25.js";function i(t,o={}){const r=c(),e=(r==null?void 0:r.proxy)||{};function p(a,n={}){s.report(a,{...n,...o})}t==="test_report_ow"&&p(t,{a:e.a})}export{i as report};
