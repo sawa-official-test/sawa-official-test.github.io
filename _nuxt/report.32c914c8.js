@@ -1,0 +1,1 @@
+import{g as c,l as f}from"./entry.7340d8c9.js";function a(o,t={}){const r=c();r!=null&&r.proxy;function e(p,n={}){f.report(p,{...n,...t})}o==="test_report_ow"&&e(o,{})}export{a as report};
