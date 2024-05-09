@@ -1,1 +1,0 @@
-import{b1 as t,P as o,a7 as r,cd as a}from"./entry.24ff6e85.js";import i from"./search-modal.pc.2c0b6d82.js";import"./AboutSA2.c58609d2.js";import"./UICarouselView.0c9748d9.js";import"./search-cell.6ff4081c.js";import"./model-cell.243c276c.js";import"./model.ed8fae27.js";function u(){if(t().isPc){o(i,{});return}r().setCurrentPayChildPage(a.SWITCH)}export{u as switchAccount};

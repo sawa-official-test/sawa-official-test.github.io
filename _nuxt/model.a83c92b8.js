@@ -1,1 +1,0 @@
-import{ca as s,cD as a,ci as o,cE as r}from"./entry.2c95f7ef.js";const p="recharge-item",i=s(p,e=>{function t(){const c={scene:a.正常,step:o.HOME,item:e.props.item};r(c)}return{exposed:{clickItem:t}}});export{i as setup};

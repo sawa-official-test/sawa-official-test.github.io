@@ -1,1 +1,0 @@
-System.register(["./entry-legacy.63446952.js"],(function(e,s){"use strict";var t,r,c;return{setters:[e=>{t=e.c9,r=e.c,c=e.cc}],execute:function(){e("setup",t("user-info",(()=>({exposed:{userInfo:r((()=>c().pay2User||{}))}}))))}}}));

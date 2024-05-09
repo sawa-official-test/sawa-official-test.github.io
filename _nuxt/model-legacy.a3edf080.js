@@ -1,1 +1,0 @@
-System.register(["./base-comp-factory-legacy.11e0bbfe.js","./entry-legacy.e218d934.js"],(function(e,t){"use strict";var s,r;return{setters:[e=>{s=e.c},e=>{r=e.h}],execute:function(){e("setup",s("input",(e=>(r((()=>{})),{properties:{},expose:{}}))))}}}));

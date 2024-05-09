@@ -1,1 +1,0 @@
-import{c0 as c,Q as p,K as i}from"./entry.7d2e4f25.js";function a(r,s){function n(){const o=i(),e=c(),t=e.compId?"".concat(r,"_").concat(e.compId):r;return p(t,o),e}return function(){const e=n(),t=s(e);return{...t.properties,expose:e.isTest?{...t.properties,...t.expose}:t.expose}}}export{a as c};

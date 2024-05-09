@@ -1,1 +1,0 @@
-System.register(["./entry-legacy.73c8d677.js"],(function(t,e){"use strict";var r;return{setters:[t=>{r=t.ax}],execute:function(){t("info",(t=>r("https://test02-pk.badambiz.com/api/room/get_share_detail/",{info:t}))),t("a",1)}}}));

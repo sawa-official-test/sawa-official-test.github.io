@@ -1,1 +1,0 @@
-import{ca as r,o as c,cF as t,cG as a}from"./entry.24ff6e85.js";const e="search-cell",p=r(e,s=>{const o={selectedUser:async()=>{console.log(s.props.user),await t(s.props.user),a(),console.log(e,s.props,s.props.cancel),s.props.cancel&&s.props.cancel()}};return c(()=>{console.log(e,s.props)}),{exposed:o}});export{p as setup};
