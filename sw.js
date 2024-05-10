@@ -1,12 +1,12 @@
 
 
-const cacheVersion = 'v1.0.294'
+const cacheVersion = 'v1.0.295'
 
-console.log('service worker version', '1.0.294')
+console.log('service worker version', '1.0.295')
 
 const routes = ['home','pay','test','login','fines','feedback','feedback-success']
 
-const public_path = '/html/sawa-offical-website/ksa/'
+const public_path = '/'
 
 const putInCache = async (request, response) => {
   const cache = await caches.open(cacheVersion)
@@ -37,7 +37,7 @@ function clearOldCache() {
 }
 
 self.addEventListener('activate', (event) => {
-  console.log('service worker active', '1.0.294', event)
+  console.log('service worker active', '1.0.295', event)
   event.waitUntil(clearOldCache())
   event.waitUntil(clients.claim())
 })
@@ -135,13 +135,18 @@ function getIndexUrl() {
 }
 
 self.addEventListener('fetch', function (event) {
-  if (event.request.url.indexOf(location.origin) >= 0) {
-    if (event.request.url.endsWith('.html') || event.request.url.indexOf('_nuxt') < 0) {
-      console.log('service worker', '1.0.294', event.request, event.request.url)
-      event.respondWith(networkFirst(event))
-    } else {
-      event.respondWith(cacheFirst(event))
+  try {
+    if (event.request.url.indexOf(location.origin) >= 0) {
+      const origin_url = event.request.url.split('?')[0]
+      if (event.request.url.endsWith('.html') || matchRoute(origin_url) || event.request.url.indexOf('assets') < 0) {
+        console.log('service worker', '1.0.295', event.request, event.request.url)
+        event.respondWith(networkFirst(event))
+      } else {
+        event.respondWith(cacheFirst(event))
+      }
     }
+  } catch (e) {
+    event.respondWith(networkFirst(event))
   }
 })
 
