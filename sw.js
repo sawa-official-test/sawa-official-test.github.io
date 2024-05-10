@@ -1,10 +1,10 @@
 
 
-const cacheVersion = 'v1.0.293'
+const cacheVersion = 'v1.0.294'
 
-console.log('service worker version', '1.0.293')
+console.log('service worker version', '1.0.294')
 
-const routes = ['home','pay','test','login','fines','']
+const routes = ['home','pay','test','login','fines','feedback','feedback-success']
 
 const public_path = '/html/sawa-offical-website/ksa/'
 
@@ -37,13 +37,14 @@ function clearOldCache() {
 }
 
 self.addEventListener('activate', (event) => {
-  console.log('service worker active', '1.0.293', event)
+  console.log('service worker active', '1.0.294', event)
   event.waitUntil(clearOldCache())
   event.waitUntil(clients.claim())
 })
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
+  event.waitUntil(addResourcesToCache(['index.html']))
 })
 
 const strategies = {
@@ -136,7 +137,7 @@ function getIndexUrl() {
 self.addEventListener('fetch', function (event) {
   if (event.request.url.indexOf(location.origin) >= 0) {
     if (event.request.url.endsWith('.html') || event.request.url.indexOf('_nuxt') < 0) {
-      console.log('service worker', '1.0.293', event.request, event.request.url)
+      console.log('service worker', '1.0.294', event.request, event.request.url)
       event.respondWith(networkFirst(event))
     } else {
       event.respondWith(cacheFirst(event))
